@@ -35,7 +35,7 @@ public class TestClass {
 				 case decimal:
 				 case incremento:
 				 case exponente:
-				 case variable: resultados+="Token:"+token+" "+ lexer.lexeme+"\n";
+				 case variable: resultados+="<"+token+" "+ lexer.lexeme+">";
 				 		break;
 				 case IF:
 				 case FOR:
@@ -44,7 +44,7 @@ public class TestClass {
 				 case WHILE:
 				 case DO:
 				 case BREAK:
-					 resultados+="Palabra reservada\n"+token+"\n";
+					 resultados+="<"+token+">";
 				break;
 				 case OPENPARENTHESIS:
 				 case CLOSEPARENTHESIS:
@@ -53,7 +53,7 @@ public class TestClass {
 				 case OPENBRACKET:
 				 case CLOSEBRACKET:
 				 case SEMICOLON:
-					 resultados+="Delimitador: "+token+"\n";
+					 resultados+="<"+token+">\n";
 				break;
 				 case OR:
 				 case AND:
@@ -62,14 +62,13 @@ public class TestClass {
 				 case LOWER:
 				 case GREATER_EQUALS:
 				 case LOWER_EQUALS:
-					 resultados+="Operador: \n"+token+"\n";
+					 resultados+="<"+token+">";
 			     break;
-				 default: resultados+="Token:"+token+"\n";
+				 default: resultados+="<"+token+">";
 				 		break;
 				 }
 			 }
-		 
-		 JOptionPane.showMessageDialog(null, resultados);
+		 System.out.println(resultados);
 			 
 		 }
 		 
