@@ -19,6 +19,23 @@ white=[ \t\r\n]+
 "then"	{ return THEN;}
 "else"	{ return ELSE;}
 "for"	{ return FOR;}
+"while"	{ return WHILE;}
+"do"	{ return DO;}
+"break"	{ return BREAK;}
+
+"{}"    { return LLAVES;}
+"[]"	{ return CORCHETES;}
+";"		{ return PUNTOCOMA;}
+
+"||"	{ return OR;}
+"&&"	{ return AND;}
+"=="	{ return EQUALS;}
+
+">"		{ return GREATER;}
+"<"		{ return LOWER;}
+">="	{ return GREATER_EQUALS;}
+"<="	{ return LOWER_EQUALS;}
+
 
 
 {white} {/*Ignore*/}
@@ -28,7 +45,7 @@ white=[ \t\r\n]+
 {L}	{lexeme =yytext(); return variable;}
 {D} {lexeme=yytext(); return numero; }
 [0-9]+.[0-9]+ {lexeme=yytext(); return decimal; }
-[a-z]*[A-Z]*\+\+ {lexeme=yytext(); return incremento; }
+s*\+\+s {lexeme=yytext(); return incremento; }
 [+-]?(\d+(\.\d*)?|\.\d+)([eE][+-]?\d+)? {lexeme=yytext(); return exponente; }
 
 [a-z]+ ([0-9]+ | [a-z]+)* {lexeme=yytext(); return ID;}

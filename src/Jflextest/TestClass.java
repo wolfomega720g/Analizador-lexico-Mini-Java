@@ -40,7 +40,20 @@ public class TestClass {
 				 case IF:
 				 case FOR:
 				 case THEN:
-				 case ELSE: 
+				 case ELSE:
+				 case WHILE:
+				 case DO:
+				 case BREAK:
+				 case LLAVES:
+				 case CORCHETES:
+				 case PUNTOCOMA:
+				 case OR:
+				 case AND:
+				 case EQUALS:
+				 case GREATER:
+				 case LOWER:
+				 case GREATER_EQUALS:
+				 case LOWER_EQUALS:
 					 resultados+="Palabra reservada de if\n";
 			     break;
 				 default: resultados+="Token:"+token+"\n";
