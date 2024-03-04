@@ -23,9 +23,13 @@ white=[ \t\r\n]+
 "do"	{ return DO;}
 "break"	{ return BREAK;}
 
-"{}"    { return LLAVES;}
-"[]"	{ return CORCHETES;}
-";"		{ return PUNTOCOMA;}
+"("    { return OPENPARENTHESIS;}
+")"    { return CLOSEPARENTHESIS;}
+"{"    { return OPENKEY;}
+"}"    { return CLOSEKEY;}
+"["		{ return OPENBRACKET;}
+"]"		{ return CLOSEBRACKET;}
+";"		{ return SEMICOLON;}
 
 "||"	{ return OR;}
 "&&"	{ return AND;}

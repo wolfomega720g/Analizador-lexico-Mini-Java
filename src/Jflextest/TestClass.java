@@ -44,9 +44,17 @@ public class TestClass {
 				 case WHILE:
 				 case DO:
 				 case BREAK:
-				 case LLAVES:
-				 case CORCHETES:
-				 case PUNTOCOMA:
+					 resultados+="Palabra reservada\n"+token+"\n";
+				break;
+				 case OPENPARENTHESIS:
+				 case CLOSEPARENTHESIS:
+				 case OPENKEY:
+				 case CLOSEKEY:
+				 case OPENBRACKET:
+				 case CLOSEBRACKET:
+				 case SEMICOLON:
+					 resultados+="Delimitador: "+token+"\n";
+				break;
 				 case OR:
 				 case AND:
 				 case EQUALS:
@@ -54,7 +62,7 @@ public class TestClass {
 				 case LOWER:
 				 case GREATER_EQUALS:
 				 case LOWER_EQUALS:
-					 resultados+="Palabra reservada de if\n";
+					 resultados+="Operador: \n"+token+"\n";
 			     break;
 				 default: resultados+="Token:"+token+"\n";
 				 		break;
